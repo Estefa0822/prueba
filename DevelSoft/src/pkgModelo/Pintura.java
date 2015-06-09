@@ -4,6 +4,7 @@
 
 package pkgModelo;
 
+import java.awt.Color;
 import java.util.LinkedList;
 import javax.accessibility.AccessibleState;
 
@@ -15,23 +16,55 @@ import javax.accessibility.AccessibleState;
  */
 
 public class Pintura extends Area{
-    int duracion;
-    LinkedList<Auto> autos; //La lista se va a comportar como una cola
-    Servicio[] servicios;
+    private LinkedList<Auto> autos; //La lista se va a comportar como una cola
+    
     
     public Pintura() {
-        autos = new LinkedList<>();
-        duracion = 60; 
+        this.autos = new LinkedList<>();
+        super.servicios = new Servicio[1];
+        super.duracion = 60;
+        super.nombre="Pintura";        
+        addServicios();
+    }
+    
+    
+    /**
+     * Este método se encarga de adicionar los servicios al área
+     */
+    private void addServicios(){        
+        Servicio pintura = new Servicio("pintura", 2000000, 60);
         servicios = new Servicio[1];
-        
-        
-        
+        servicios[0] = pintura;
     }
+    
+    /**
+     * Se encarga de adicionar un auto a la "cola" de autos que están esperando
+     * ser atendidos
+     * @param auto Auto que va a ingresar a la cola de espera
+     */
+    public void adicionarAutos(Auto auto){
+        autos.add(auto);
+    }
+    
+    /**
+     * Información del auto que ingresa a la cola de espera
+     * @param placa Placa del auto
+     * @param modelo Placa del auto
+     * @param color Color del auto
+     */
+    public void adicionarAutos(String placa, String modelo, Color color){
+        Auto auto = new Auto(placa, modelo, "Azul");
+        autos.add(auto);
+    
+    }
+    
+    public LinkedList<Auto> obtenerAutos(){
+        return autos;
+    }
+    
+    
+    
 
-    public Pintura(int duracion, LinkedList<Auto> autos) {
-        this.duracion = duracion;
-        this.autos = autos;
-    }
     
     /**
      * Este método se encarga de añadir un auto a la lista de autos 
@@ -53,11 +86,7 @@ public class Pintura extends Area{
      * Se encarga de adicionar servicios al área de pintura
      */
     
-    public void addServicios(){
-        Servicio pintura = new Servicio("pintura", 2000000, 60);
-        servicios[0] = pintura;
-        
-    }
+    
     
     
     

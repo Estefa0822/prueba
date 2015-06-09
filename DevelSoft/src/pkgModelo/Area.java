@@ -17,30 +17,22 @@ import java.util.LinkedList;
  */
 
 public class Area {
-   String nombre;
-   String descripcion;
-   int duracion;
-   Servicio[] servicios;
-   
-   
+   protected  String nombre;
+   protected int duracion;
+   protected Servicio[] servicios;
+      
     public Area() {
         
     }
 
-    public Area(String nombre, String descripcion, int duracion, Servicio[] servicios) {
+    public Area(String nombre, int duracion, Servicio[] servicios) {
         this.nombre = nombre;
-        this.descripcion = descripcion;
         this.duracion = duracion;
         this.servicios = servicios;
-        
     }
 
     public String getNombre() {
         return nombre;
-    }
-
-    public String getDescripcion() {
-        return descripcion;
     }
 
     public int getCosto(){
@@ -48,13 +40,26 @@ public class Area {
     }
     
     public int getDuracion() {
+        //Recorrer todas los servicios dentro de esa área
         return duracion;
     }
     
     public LinkedList getAutos(){
         return null;
     }
+
+    public void getServicios() {
+        System.out.println("Servicios del area: ");
+        for (int i = 0; i < servicios.length; i++) {
+            System.out.println(""+ servicios[i].getNombre());
+            System.out.println(""+ servicios[i].getCosto());
+            System.out.println(""+ servicios[i].getDuracion());
+        }        
+    }
+
+   
     
+           
     
     /**
      * Este método se encarga de buscar un servicio dentro de la lista de servicios
