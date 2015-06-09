@@ -30,7 +30,6 @@ public class Pintura extends Area{
      */
     private void addServicios(){        
         Servicio pintura = new Servicio("pintura", 2000000, 60);
-        servicios = new Servicio[1];
         servicios[0] = pintura;
     }
     
@@ -40,6 +39,7 @@ public class Pintura extends Area{
      * @param auto Auto que va a ingresar a la cola de espera
      */
     public void adicionarAutos(Auto auto){
+        System.out.println("Se adicionó un auto al área de pintura");
         autos.add(auto);
     }
     
