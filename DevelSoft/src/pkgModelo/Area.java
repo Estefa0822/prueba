@@ -20,16 +20,15 @@ public class Area {
    String nombre;
    String descripcion;
    int duracion;
-   Servicio[] servicios;
-
+   
     public Area() {
     }
 
-    public Area(String nombre, String descripcion, int duracion, Servicio []servicios) {
+    public Area(String nombre, String descripcion, int duracion) {
         this.nombre = nombre;
         this.descripcion = descripcion;
         this.duracion = duracion;
-        this.servicios = servicios;
+        
     }
 
     public String getNombre() {
@@ -51,32 +50,26 @@ public class Area {
     public LinkedList getAutos(){
         return null;
     }
-    /**
-     * Crea los servicios para cada área
-     * @param servicio 
-     */
-    public void crearServicios(Servicio[]servicio){
-        this.servicios = servicio.clone();        
-    }
+    
     
     /**
      * Este método se encarga de buscar un servicio dentro de la lista de servicios
      * @param servicio Nombre del servicio a buscar
      * @return indice del servicio que estaba buscando
      */
-    public int obtenerServicio(String servicio){
-        int i=0;
-        boolean encontrado = false;
-        int indiceServicio=-1;
-        
-        while (encontrado || i < servicio.length()) {
-            if(servicios[i].getNombre().equals(servicio)){
-                encontrado= true;
-                indiceServicio = i;
-            }
-            i++;
-        }
-        return indiceServicio;        
-    }
+//    public int obtenerServicio(String servicio){
+//        int i=0;
+//        boolean encontrado = false;
+//        int indiceServicio=-1;
+//        
+//        while (encontrado || i < servicio.length()) {
+//            if(servicios[i].getNombre().equals(servicio)){
+//                encontrado= true;
+//                indiceServicio = i;
+//            }
+//            i++;
+//        }
+//        return indiceServicio;        
+//    }
     
 }
