@@ -49,11 +49,11 @@ public class Area {
     }
 
     public void getServicios() {
-        System.out.println("Servicios del area: ");
+        System.out.println("\nServicios del area: ");
         for (int i = 0; i < servicios.length; i++) {
-            System.out.println(""+ servicios[i].getNombre());
-            System.out.println(""+ servicios[i].getCosto());
-            System.out.println(""+ servicios[i].getDuracion());
+            System.out.println("Nombre del servicio: "+ servicios[i].getNombre());
+            System.out.println("Costo del servicio: "+ servicios[i].getCosto());
+            System.out.println("Duración del servicio: "+ servicios[i].getDuracion());
         }        
     }
 

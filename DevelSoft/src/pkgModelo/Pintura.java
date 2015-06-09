@@ -6,9 +6,6 @@ package pkgModelo;
 
 import java.awt.Color;
 import java.util.LinkedList;
-import javax.accessibility.AccessibleState;
-
-
 
 /**
  * autos: Lista de autos que van a recibir servicios dentro de esta area
@@ -61,46 +58,5 @@ public class Pintura extends Area{
     public LinkedList<Auto> obtenerAutos(){
         return autos;
     }
-    
-    
-    
-
-    
-    /**
-     * Este método se encarga de añadir un auto a la lista de autos 
-     * @param auto se adiciona a la lista de autos
-     */
-//    public void adicionarAutos(Auto auto){
-//        //Adiciono el auto a la lista de autos
-//        autos.add(auto);
-//        super.servicios[0].adicionarAuto(auto);
-////        Adiciono el auto a la estructura de datos de servicio 
-////        for (int i = 0; i < serviciosAuto.length; i++) {            
-////            super.servicios[super.obtenerServicio(serviciosAuto[i].getNombre())].adicionarAuto(auto);
-////        }
-//    }
-    
-    
-    
-    /**
-     * Se encarga de adicionar servicios al área de pintura
-     */
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+     
 }
