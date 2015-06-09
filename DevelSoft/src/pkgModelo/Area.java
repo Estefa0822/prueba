@@ -20,14 +20,18 @@ public class Area {
    String nombre;
    String descripcion;
    int duracion;
+   Servicio[] servicios;
+   
    
     public Area() {
+        
     }
 
-    public Area(String nombre, String descripcion, int duracion) {
+    public Area(String nombre, String descripcion, int duracion, Servicio[] servicios) {
         this.nombre = nombre;
         this.descripcion = descripcion;
         this.duracion = duracion;
+        this.servicios = servicios;
         
     }
 
