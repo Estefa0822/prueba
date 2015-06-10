@@ -35,7 +35,7 @@ public class PruebaArea {
             areas.get(i).getServicios();
         }
 
-        //Adicionar un área
+        //_____________________ Adicionar un auto ________________________________
         Auto automovil1 = new Auto("ABC", "AUDI", "Negro");
         String nombreArea = "Mecánica general";
 
@@ -60,6 +60,7 @@ public class PruebaArea {
             i++;
 
         } while (indice == -1 && i < areas.size());
+        
 
     }
 
